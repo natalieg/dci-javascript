@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Switch</title>
+</head>
+
+<body>
+    <script>
+
+        var date = new Date().getDay()
+        date = prompt("Set the day: ");
+    
+        switch (date) {
+            case "0":
+                day = "Sunday";
+                break;
+            case "1":
+                day = "Monday";
+                break;
+            case "2":
+                day = "Tuesday";
+                break;
+            case "3":
+                day = "Wednesday";
+                break;
+            case "4":
+                day = "Thursday";
+                break;
+            case "5":
+                day = "Friday";
+                break;
+            case "6":
+                day = "Saturday";
+        }
+
+        if(date == 0 || date == 6){
+            info = "Enjoy your weekend!"
+        } else {
+            info = "It's a workday!"
+        }
+
+        document.write("Today is " + day);
+        document.write("<br>" + info);
+
+    </script>
+</body>
+
+</html>

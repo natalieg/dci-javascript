@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Validation JS</title>
+</head>
+
+<body>
+
+    <script>
+        // let myInput = prompt("Please write something here:");
+        // alert("Your input was: " + myInput);
+        // alert("Length of your password: " + myInput.length);
+
+    
+
+        var enterPassword = function () {
+            var myInput = prompt("Please enter a strong Password:");
+            passwordCheck(myInput);
+        }
+
+        var passwordCheck = function (myInput) {
+            if (myInput.length < 6 || myInput.includes("adsf")) {
+                alert("Your password length is: " + myInput.length +
+                    ".\n Your password is too weak!");
+                enterPassword();
+
+            } else if (myInput.length < 12) {
+                alert("Your password length is: " + myInput.length +
+                    ".\n  Your password is better but still too weak");
+                enterPassword();
+
+            } else {
+                document.write("Your password length is: " + myInput.length +
+                    ".<br> You created a strong password!");
+            }
+        }
+
+        enterPassword();
+
+    </script>
+</body>
+
+</html>
