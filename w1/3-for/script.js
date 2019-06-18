@@ -25,7 +25,7 @@ food.push("Corn");
 let fontColor = 255;
 for(i = 0; i < food.length; i++){
     document.write("<div id='" + food[i] + "'>" + food[i] + "</div>");
-    let color = i*11;
+    let color = i*10;
     document.getElementById(food[i]).style.backgroundColor = "rgb(" + 100 + "," + color +"," + color +")";
     document.getElementById(food[i]).style.color = "rgb(" + fontColor + "," + fontColor +"," + fontColor +")";
     document.getElementById(food[i]).style.fontWeight = "bold";
