@@ -1,0 +1,54 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.banner {
+    height: 50vw;
+    background: rgb(62, 110, 62);
+    background-image: linear-gradient(to right bottom, 
+        rgba(231, 85, 117, 0.5), 
+        rgba(23, 165, 118, 0.6)), 
+          url(hero.jpg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    text-align: center;
+    color: whitesmoke;
+    position: relative;
+    margin-bottom: 0;
+    font-size: 4em;
+    letter-spacing: 0.4em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: normal;
+    text-transform: uppercase;
+    text-shadow: 1px 1px 6px rgba(245, 245, 245, 0.767);
+}
+
+ p {
+    text-align: center;
+    position: relative;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: whitesmoke;
+}
+
+.button {
+    padding: 15px;
+    background-color: rgb(163, 194, 190);
+    background-color: whitesmoke;
+    width: 200px;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 25px;
+    box-shadow: 2px 2px 8px black;
+    text-transform: uppercase;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: opacity 3s;
+}
