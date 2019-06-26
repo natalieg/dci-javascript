@@ -1,0 +1,12 @@
+div {
+    padding: 5px 20px 20px;
+    text-align: center;
+}
+
+.watched {
+    background-color: rgb(117, 163, 64);
+}
+
+.unwatched {
+    background-color: rgb(224, 187, 21);
+}

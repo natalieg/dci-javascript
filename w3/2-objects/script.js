@@ -93,6 +93,7 @@ document.write("<hr>");
 
 let toWatchList = [];
 
+document.write("<div class=watched>")
 document.write("<h3>Watched Movie List:</h3>")
 movies.forEach(element => {
     var stars = " "
@@ -106,11 +107,14 @@ movies.forEach(element => {
         toWatchList.push(element);
     }
 });
+document.write("</div>")
 
 document.write("<br>");
 document.write("<hr>");
 
+document.write("<div class=unwatched>")
 document.write("<h3>To Watch List:</h3>")
 toWatchList.forEach(element => {
     document.write("Movie Title: " + element.title + "<br>");
 });
+document.write("</div>")
