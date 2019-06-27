@@ -34,3 +34,21 @@ function count(number){
 }
 
 count(12);
+
+document.write("<hr>");
+
+function square(number){
+    let third = number/3;
+    for(i = 0; i < number; i++ ){
+        for(b = 0; b < number; b ++){
+            if((i >= third && i < third*2) && (b >= third && b < third*2)){
+                document.write(" <span style='color:lightcoral'> &#10045; </span> ");
+            } else {
+                document.write("<span style='color:darkcyan'>&#10057; </span>");
+            }
+        }
+        document.write("<br>")
+    }
+}
+
+square(15 );

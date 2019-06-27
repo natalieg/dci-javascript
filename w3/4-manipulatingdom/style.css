@@ -1,0 +1,12 @@
+.light {
+    color: aquamarine;
+    border: 4px solid lawngreen;
+    background-color: black;
+    padding: 10px;
+}
+.bg {
+    background: rgb(224, 167, 224);
+    border: 5px dotted black;
+    padding: 10px;
+    text-align: center;
+}
