@@ -16,7 +16,6 @@ img.setAttribute("src", "leaf.jpeg");
 
 let toggle = true;
 img.addEventListener("click", function(){
-    console.log("hi");
      if(toggle){
          img.setAttribute("src", "leaf.jpeg");
          toggle = false;

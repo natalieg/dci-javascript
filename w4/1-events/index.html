@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Events</title>
+</head>
+<body>
+    <button onclick="sayHi()">Click here</button>
+   <div>
+       <br>
+       <button onClick="changeBGto('red')">Red Color</button>
+       <button onClick="changeBGto('blue')">Blue Color</button>
+       <button onClick="changeBGto('green')">Green Color</button>
+       <button onClick="changeBGto('yellow')">Yellow Color</button>
+   </div>
+   <div id="logo">
+       <img onclick="changeImg()" src="leaf.jpeg" alt="">
+   </div>
+   <div>
+       <button onClick="randomNumber()">Random Img</button>
+       <button onClick="autoChange()">Auto Random Img</button>
+        <p id="randomNumberOutput"></p>
+        <p id="randomImage"></p>
+    </div>
+
+    <div>
+        <button onClick="changeBGarray()" id="btnColorArray">Color Change Background</button>
+        <button onClick="changeRanBg()" id="btnColorRan">Color Change Random BG</button>
+    </div>
+
+   <!-- script -->
+    <script src="script.js"></script>
+</body>
+</html>

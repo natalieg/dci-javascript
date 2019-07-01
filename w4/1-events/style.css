@@ -1,0 +1,14 @@
+button {
+    padding: 15px;
+    font-weight: bold;
+}
+
+#logo img {
+    margin: 20px;
+    width: 100px;
+}
+
+#btnColorArray, #btnColorRan {
+    width: 300px;
+    text-align: center;
+}
