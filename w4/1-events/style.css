@@ -8,7 +8,22 @@ button {
     width: 100px;
 }
 
+img {
+    width: 200px;
+}
+
 #btnColorArray, #btnColorRan {
     width: 300px;
     text-align: center;
+}
+
+#intervButton {
+    width: 604px;
+    margin-top: 10px;
+}
+
+#hoverP {
+    position: relative;
+    top: -200px;
+    left: 250px;
 }

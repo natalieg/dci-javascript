@@ -29,9 +29,21 @@
     <div>
         <button onClick="changeBGarray()" id="btnColorArray">Color Change Background</button>
         <button onClick="changeRanBg()" id="btnColorRan">Color Change Random BG</button>
+        <button onClick="toggleAuto()" id="intervButton">Start This</button>
+    </div>
+
+    <div>
+        <hr>
+        <input placeholder="Name" type="text" onblur="valueInput()" id="input1">
+        <p id="valueOutput"></p>
+    </div>
+    <div>
+        <img id="hoverImg" src="mountain.jpeg" alt="" onmouseover="over()" onmouseout="out()">
+        <p id="hoverP"></p>
     </div>
 
    <!-- script -->
     <script src="script.js"></script>
+
 </body>
 </html>

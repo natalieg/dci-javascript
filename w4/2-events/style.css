@@ -1,0 +1,20 @@
+body {
+    background-image: url(mountain.jpeg);
+    background-size: cover;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    margin: 50px auto;
+    border: 1px solid rgba(0, 0, 0, 0.295);
+    width: 50%;
+    text-align: center;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.363);
+}
+
+input {
+    display: block;
+    margin: 0 auto 20px;
+}
