@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <h3>To do List</h3>
+        <input id="item" type="text" size="25" placeholder="Enter what to do!">
+        <button id="btn" type="button">Add</button>
+    </form>
+
+    <ul></ul>
+    <script>
+
+        function addElement() {
+            let textInput = document.getElementById("item");  //getting the text from the input
+            let text = textInput.value;   //getting value of text input element
+            let ul = document.querySelector("ul");  //getting element <ul> to add element to
+            let h3 = document.createElement("h3");  //creating THE NEW TO DO ITEM
+
+
+
+            h3.innerHTML = text;    //inserting the text wich we wrote it from the input to the h3 to do list
+
+            h3.onclick = function () { this.parentNode.removeChild(this); }/* delete the created items by onclicking on them */
+
+
+            if (ul.childElement == 0) {  //using if/else statement to add items to top of list
+                ul.appendChild(h3);       // will add if count of ul children is 0 otherwise add before first item
+            }
+            else {
+                ul.insertBefore(h3, ul.firstChild);
+            }
+        }
+
+        let button = document.getElementById("btn");
+        button.onclick = addElement;
+      /* the submit key to add after writing the text inside the input */
+    </script>
+</body>
+
+</html>

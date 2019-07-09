@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Todo</title>
+</head>
+
+<body>
+    <style>
+        body {
+            text-align: center;
+        }
+
+        p {
+            padding: 5px;
+            font-size: 1.5em;
+            margin: 2px;
+            text-align: center;
+            opacity: 1;
+            transition: .2s;
+            height: 25px;
+        }
+
+        #list {
+            width: 50%;
+            margin: 20px auto;
+        }
+
+        .animate {
+            opacity: 0;
+            height: 0px;
+        }
+    </style>
+
+    <input type="text" id="input">
+    <button id="addBtn">Add to List</button>
+    <div id="list">
+
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
