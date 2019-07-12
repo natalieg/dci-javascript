@@ -8,12 +8,13 @@ addBtn.addEventListener("click", function(){
     let task = document.createElement("p");
     let text = document.createTextNode(input.value);
     input.value = "";
-    console.log(main);
+    // console.log(main);
     main.appendChild(task);
     task.appendChild(text);
     task.setAttribute("id", "task" + counter);
     task.setAttribute("style", "background-color: " + addDarkerBackground());
     
+    // Adds Event Listener to every new Item
     taskList = document.querySelectorAll("p");
     taskList[counter].addEventListener("click", function(){
         let removeMe = this;
@@ -23,10 +24,15 @@ addBtn.addEventListener("click", function(){
           }, 200);
     
         counter --;
+        input.focus();
     });
     counter ++;
+    input.focus();
 })
 
+/**
+ * Input Field reacts to Enter
+ */
 document.getElementById("input")
     .addEventListener("keyup", function(event) {
     event.preventDefault();
@@ -35,9 +41,13 @@ document.getElementById("input")
     }
 });
 
-let r = 180;
-let g = 190;
-let b = 205;
+
+/**
+ * Random Background Color
+ */
+let r = 100;
+let g = 150;
+let b = 150;
 let growIntA = 10;
 let growIntB = 20;
 
@@ -46,16 +56,16 @@ function addDarkerBackground(){
     b += growIntB;
     r += growIntA;
     if(r >= 255){
-        r = 150;
-        growIntA = getRandomArbitrary(10, 50);
+        r = 120;
+        growIntA = getRandomArbitrary(5, 40);
     }
     if(g >= 255){
-        g = 180;
-        growIntA = getRandomArbitrary(10, 50);
+        g = 160;
+        growIntA = getRandomArbitrary(5, 40);
     }
     if(b >= 255){
-        b = 190;
-        growIntB = getRandomArbitrary(10, 50);
+        b = 160;
+        growIntB = getRandomArbitrary(5, 40);
     }
     return color = "rgb("+r+","+g+","+b+")";
 }

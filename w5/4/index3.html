@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <style>
+        #bannerMessage {
+            /* background-color: rgba(67, 216, 141, 0.534); */
+            border-radius: 5px;
+            padding: 15px;
+            text-align: center;
+            transition: 1s transform;
+        }
+
+        button {
+            background-color: black;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            transition: .8s;
+        }
+        button:hover {
+            filter: invert(1);
+        }
+        .small {
+            transform: scale(0.5) translate(0, 50px);
+            margin: 0 auto;
+        }
+        input {
+            margin-bottom: 15px;
+            text-align: center;
+            width: 130px;
+        }
+        .miniDiv {
+            width: 80px;
+            height: 80px;
+            float: left;
+            margin: 2px;
+            background-size: cover;
+        }
+        .growMe {
+            transform: scale(3);
+            transition: .3s;
+        }
+    </style>
+
+    <div id="bannerMessage">
+        <p>Hello World</p>
+        <p id="colorCode"></p>
+        <input maxlength="2" placeholder="enter change step" id="changeValue" type="text"><br>
+        <button id="btn">Change Color</button><br>
+        <button id="btn2">Smaller</button><br>
+        <button id="btn3">Create small Div</button><br>
+        <!-- <button id="btn4">Create small Div with Img</button> -->
+        <p id="popCount"></p>
+    </div>
+    <div id="content"></div>
+    <script src="script3.js"></script>
+</body>
+
+</html>

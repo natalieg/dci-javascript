@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Divide</title>
+</head>
+<body>
+    <h2>Divide</h2>
+    <p>Number 1 <input type="text" id="input1"></p>
+    <p>Number 2 <input type="text" id="input2"></p>
+    <button onclick="divide()" id="divideBtn">Divide</button>
+    <p id="result"></p>
+    <hr>
+    <h2>Password</h2>
+    <p style="font-size: 14px;">Minimum length <span id="minLength"></span> letters <span id="requirements"></span></p>
+    <p>New Password: <input type="text" onkeyup="writePasswordLength()" id="password"><span id="pwLength" style="font-size: 12px"></span></p>
+    <p id="passOutcome"></p>
+    <hr>
+    <h3>Old Password Storage</h3>
+    <div id="pwStorage"></div>
+    <script src="script3.js"></script>
+</body>
+</html>
