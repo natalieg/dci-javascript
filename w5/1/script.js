@@ -12,7 +12,7 @@ document.write(allColors);
 
 document.write("<hr>")
 
-document.write(allColors.slice(1,3)); // slice gives back part of an array depending on the start and end number
+document.write(allColors.slice(1,4)); // slice gives back part of an array depending on the start and end number
 
 
 document.write(hr)
@@ -21,7 +21,7 @@ document.write(allColors.slice(1,7));
 
 document.write(hr + "Item on Index 2: " + allColors[2] + br);
 document.write("<b>Delete items with splice</b>" + br);
-allColors.splice(2, 1); // delete 1 item at the 2 index splice(index, how many)
+allColors.splice(1, 2); // delete 1 item at the 2 index splice(index, how many)
 document.write(allColors);
 
 document.write(hr + "<b>Add Items with splice</b>" + br)
@@ -34,7 +34,7 @@ cars.splice(0, 2, "mercedes", "audi", "tesla"); // delete 2 items at index 0 and
 document.write(cars);
 
 writePart("Finding Value in an Array with .find(function)");
-let numbers = [2, 4, 7, 8, 12, 33, 42];
+let numbers = [2, 13, 7, 8, 12, 44, 42];
 
 function checkNumber(num){
     return num > 12;

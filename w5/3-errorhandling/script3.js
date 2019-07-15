@@ -26,7 +26,7 @@ function divide() {
 document.getElementById("input1")
     .addEventListener("keyup", function (event) {
         event.preventDefault();
-        if (event.keyCode ===  ) {
+        if (event.keyCode ===  12) {
             document.getElementById("divideBtn").click();
         }
     });

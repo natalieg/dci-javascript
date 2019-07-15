@@ -71,7 +71,7 @@ function greyColor(){
 let minFont = 2;
 let fontSize = minFont;
 let maxFont = 55;
-let changeFontValue = 1;
+let changeFontValue = 5;
 function changeFontSize(){
     fontSize += changeFontValue;
     if(fontSize > maxFont || fontSize < minFont){
