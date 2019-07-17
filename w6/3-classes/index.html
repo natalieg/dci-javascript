@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Classes</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
+</head>
+<body>
+    <style>
+    .petInfo{
+        background-color: rgb(248, 234, 151);
+        padding: 5px;
+        margin: 5px;
+        border: 1px dashed black;
+        border-radius: 10px;
+        position: relative;
+        z-index: 1;
+    }
+    .petInfo:hover {
+        transform: scale(1.2) translate(50px, 0);
+        transition: .5s;
+        z-index: 3;
+        box-shadow: 5px 5px #4739398e;
+    }
+    #infoBlock {
+        width: 50%;
+    }
+    #infoBlock:hover > *:not(:hover){
+        filter: opacity(50%);
+    }
+    .petInfo h3{
+        margin: 0;
+        padding: 0;
+        font-family: 'Courier New', Courier, monospace;
+        font-weight: normal;
+        font-size: 22px;
+    }
+    .petInfo p {
+        background-color: rgba(255, 255, 255, 0.664);
+        padding: 12px;
+    }
+    hr {
+        margin: 0;
+        border-color: rgba(0, 0, 0, 0.527);
+        border-width: 0.03em;
+    }
+    .fas {
+        position: absolute;
+        top: 6px;
+        right: 11px;
+        font-size: 24px;
+    }
+    </style>
+    <div id="infoBlock">
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
