@@ -82,6 +82,10 @@ class Cat extends Pet{
     }
  }
 
+ 
+const dog3 = new Dog("Blue", "braun", true, "Natalie", "Harburg", "Hamburg");
+dog3.writeAllInfo();
+
  const cat2 = new Cat("Pixie", "Grey", true, 2, "mrrreew");
  cat2.writeAllInfo();
 
@@ -90,6 +94,7 @@ dog1.writeAllInfo();
 
 const dog2 = new Dog("Meany", "dark", false, "Hela", "Underground 666", "The Void");
 dog2.writeAllInfo();
+
 
 const cat1 = new Cat("Lulu", "White and Black", true, 6, "Miau Miau");
 cat1.writeAge();
