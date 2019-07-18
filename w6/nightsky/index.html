@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Rectangle</title>
+</head>
+
+<body>
+    <style>
+        .input {
+            width: 70px;
+            margin-bottom: 10px;
+        }
+
+        #main {
+            background-color: #0d0d31;
+            height: 95vh;
+            width: 100%;
+        }
+
+        .shine {
+            box-shadow: 0px 0px 10px rgb(255, 255, 255);
+            opacity: 1;
+            animation: blink 10s infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0;
+            }
+        }
+        .moon {
+            top: 200px !important;
+            left: 200px !important;
+            background-image: url("moon.jpeg");
+            background-position: center center;
+            background-size: cover;
+            box-shadow: 0px 0px 3px rgb(248, 210, 129);
+            z-index: 10;
+        }
+    </style>
+    <div>
+        <label for="">Width <input class="input" id="widthInput" type="text"></label>
+        <label for="">Color <input class="input" id="colorInput" type="text"></label>
+        <label for="">Circle? <input checked type="checkbox" name="" id="circleCheck"> </label>
+        <label for="">Star? <input checked type="checkbox" name="" id="starCheck"> </label>
+        <button id="createBtn">Create!</button>
+    </div>
+    <div id="main">
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
