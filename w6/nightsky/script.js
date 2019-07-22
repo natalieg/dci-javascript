@@ -19,15 +19,15 @@ class Rectangle {
 }
 
 class Circle extends Rectangle {
-    constructor(height, width, color, radius, star){
+    constructor(height, width, color, radius, star) {
         super(height, width, color);
         this.radius = radius;
         this.star = star;
     }
-    createCircle(){
+    createCircle() {
         this.create();
         this.newDiv.style.borderRadius = this.radius;
-        if(this.star){
+        if (this.star) {
             this.newDiv.classList.add("shine");
         }
     }
@@ -39,26 +39,27 @@ moon.newDiv.classList.add("moon");
 
 let createBtn = document.getElementById("createBtn");
 
-createBtn.addEventListener("click", function(){
-    let w = document.getElementById("widthInput").value + "px";
+createBtn.addEventListener("click", function () {
+    let w = document.getElementById("widthInput").value % 20 + "px";
     let h = w;
     let c = document.getElementById("colorInput").value;
-    let isCircle = document.getElementById("circleCheck").checked;
+    let isCircle = true;
     let isStar = document.getElementById("starCheck").checked;
     console.log(w, h, c, isCircle);
     // If any fild is empty nothing should happen
-    if(w != "" && h != "" && c != ""){
-        // Creates Circle if checked
-        if(isCircle){
-           c = new Circle(h, w, c, "50%", isStar);
-           c.createCircle();
-        } else {
-            r = new Rectangle(h, w, c);
-            r.create();
+    if (w != "" && h != "" && c != "") {
+        if(h == "0px"){
+            console.log("zero pixel")
+            h = "2px";
+            w = "2px";
+            console.log(w);
         }
+        // Creates Circle if checked
+        c = new Circle(h, w, c, "50%", isStar);
+        c.createCircle();
     } else {
         console.log("Please fill out all filds")
- }
+    }
 })
 
 
