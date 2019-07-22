@@ -12,8 +12,8 @@ class Rectangle {
         this.newDiv.style.backgroundColor = this.color;
         this.newDiv.style.margin = "10px";
         this.newDiv.style.position = "absolute";
-        this.newDiv.style.top = getRandomArbitrary(80, 800) + "px";
-        this.newDiv.style.left = getRandomArbitrary(0, 1200) + "px";
+        this.newDiv.style.top = getRandomArbitrary(5, 100) + "%";
+        this.newDiv.style.left = getRandomArbitrary(0, 100) + "%";
         motherDiv.appendChild(this.newDiv);
     }
 }
@@ -42,19 +42,17 @@ let createBtn = document.getElementById("createBtn");
 createBtn.addEventListener("click", function(){
     let w = document.getElementById("widthInput").value + "px";
     let h = w;
-    let c = document.getElementById("colorInput").value;
-    let isCircle = document.getElementById("circleCheck").checked;
-    let isStar = document.getElementById("starCheck").checked;
-    console.log(w, h, c, isCircle);
+    let color = document.getElementById("colorInput").value;
+    let amount = document.getElementById('amountInput').value;
+    let isCircle = true;
+    let isStar = true;
+    //console.log(w, h, color, isCircle);
     // If any fild is empty nothing should happen
-    if(w != "" && h != "" && c != ""){
-        // Creates Circle if checked
-        if(isCircle){
-           c = new Circle(h, w, c, "50%", isStar);
-           c.createCircle();
-        } else {
-            r = new Rectangle(h, w, c);
-            r.create();
+    if(w != "" && h != "" && color != ""){
+        for (let index = 0; index < amount; index++) {
+            c = new Circle(h, w, color, "50%", isStar);
+            c.createCircle();
+            console.log(index, color)
         }
     } else {
         console.log("Please fill out all filds")
