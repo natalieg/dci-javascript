@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Object Stuff</title>
+</head>
+
+<body>
+    <script>
+        let book = {
+            name: "JavaScript",
+            author: "Ja Va",
+            year: "2019",
+            information: function () {
+                return `Name: ${this.name}\nAuthor: ${this.author} \nYear published: ${this.year}`
+            }
+        }
+        console.log(book.information());
+       
+        for(let property in book){
+            console.log(book[property]);
+        }
+
+        let message = "Hello World";
+        let greet = "Hi there!";
+        
+        console.log(message);     
+        console.log(greet);     
+
+        /////
+
+        let person = {
+            name: "John",
+            age: 28,
+            gender: "male"
+        }
+
+        // 'Copy' of person, assigning person to user
+        let user = person;
+        console.log(user.name);
+
+        ////
+
+        let personName = "John Smith";
+        let objectPersonName = new String("Jane Smith");
+
+        
+   
+    </script>
+</body>
+
+</html>

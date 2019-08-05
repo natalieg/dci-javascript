@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Password</title>
+</head>
+<body>
+    <style>
+    .valid {
+        font-weight: bold;
+        color: rgb(43, 177, 43);
+    }
+    .invalid {
+        color: red;
+    }
+    </style>
+    <div id="main">
+        <form action="">
+            <label for="password">Password:</label>
+            <input id="password" autocomplete="off" type="text">
+            <div id="requirements">
+                <p id="reqChar">8 characters long</p>
+                <p id="reqLower">contains lowercase</p>
+                <p id="reqUpper">contains uppercase</p>
+                <p id="reqNumSpec">contains number or special character</p>
+            </div>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

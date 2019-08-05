@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    function Book(name,author,year){
+        this.bookName = name;
+        this.bookAuthor = author;
+        this.bookYear = year;
+        this.info = function(){
+            return `Name: ${this.bookName} Author: ${this.bookAuthor}`
+        }
+    }
+
+    let cssBook = new Book("Learn CSS in 3 Days!", "Mister Knowitall", 2005);
+    console.log(cssBook.info());
+
+    for(let i in cssBook){
+        console.log(cssBook[i]);
+    }
+
+    </script>
+</body>
+</html>

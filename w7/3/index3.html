@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function serverRequest(query, callback){
+            setTimeout(function(){
+                let response = query + " 20 is available";
+                callback(response);
+            }, 2000);
+        }
+
+        function getResult(result){
+            console.log(`The response from the server: ${result}`)
+        }
+
+        serverRequest("Available cars in Hamburg", getResult);
+    </script>
+</body>
+</html>

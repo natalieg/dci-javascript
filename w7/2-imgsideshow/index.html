@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+    img {
+        height: 300px;
+    }
+    .btnActive {
+        background: green;
+        border: 2px solid green;
+    }
+    .animation {
+        animation: opacity 2.1s linear infinite;
+    }
+    @keyframes opacity {
+            0% {opacity: 0; transform: scale(.8)}
+            20% {opacity: 1; transform: scale(1)}
+            80% {opacity: 1; transform: scale(1)}
+            100% {opacity: 0; transform: scale(.8)}
+        }
+    button {
+        padding: 10px;
+        border-radius: 5px;
+    }
+    </style>
+    <div id="main"></div>
+    <button id="prev">Prev</button>
+    <button id="auto">Auto</button>
+    <button id="next">Next</button>
+    <script src="script.js"></script>
+</body>
+</html>
