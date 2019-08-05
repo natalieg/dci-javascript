@@ -24,7 +24,8 @@ document.getElementById('person2').innerHTML = `<b>Person<b> Info <br>`
 for(let i in person){
     document.getElementById('person2').innerHTML += `${i}: ${person[i]} <br>`;
 }
-
-
+document.write("<hr>");
 
 console.log(localStorage);
+
+

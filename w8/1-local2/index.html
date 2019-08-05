@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Local 2</title>
+</head>
+<body>
+    <style>
+        input {
+            padding: 4px;
+        }
+    .btn {
+        border: 1px solid rgb(167, 167, 167);
+        display: inline;
+        padding: 6px;
+    }
+    .btn:hover {
+        background: rgb(214, 199, 199);
+        cursor: pointer;
+    }
+    #display {
+        margin-top: 20px;
+    }
+    </style>
+    <form action="">
+        <label for="key">Key</label>
+        <input id="key" autocomplete="off" type="text">
+
+        <label for="value">Value</label>
+        <input id="value" autocomplete="off" type="text">
+
+        <input type="button" id="addBtn" value="Save">
+        <input type="button" id="delBtn" value="Delete">
+    </form>
+    <div id="display"></div>
+    <script src="script.js"></script>
+</body>
+</html>
