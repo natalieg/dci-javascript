@@ -59,10 +59,3 @@ function showItems() {
     }
 }
 
-delButtons.forEach(element => {
-    element.addEventListener("click", function(){
-        console.log(element.value);
-        localStorage.removeItem(element.value);
-        showItems();
-    })
-});

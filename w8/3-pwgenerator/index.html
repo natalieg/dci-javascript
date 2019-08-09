@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>PW Generator</title>
+</head>
+
+<body>
+    <input type="text" id="numbers" value="8">
+    <button id="generateBtn">Generate</button>
+    <div id="output"></div>
+    <script>
+
+        var generateBtn = document.getElementById("generateBtn");
+        var output = document.getElementById("output");
+
+        var letters = "abcdefghijklmnopqrstuvwxyz";
+        var capLetter = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        var numbers = "0123456789";
+        var special = "!@#$%^&*()_-+=/?";
+        var arr = [letters, capLetter, numbers, special];
+
+        var newPassword = "";
+
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * Math.floor(max));
+        }
+
+        generateBtn.addEventListener("click", function () {
+            var myLength = document.getElementById("numbers").value;
+            newPassword = "";
+            var innerCounter = 0;
+            console.log("create new");
+            for (y = 0; y < myLength; y++) {
+                if (innerCounter < arr.length - 1) {
+                    innerCounter++;
+                } else {
+                    innerCounter = 0;
+                }
+                console.log(innerCounter);
+                var element = arr[innerCounter];
+                newPassword += element[getRandomInt(element.length)];
+            }
+            newPassword = newPassword.shuffle();
+            output.innerHTML = newPassword;
+        });
+
+        String.prototype.shuffle = function () {
+            var a = this.split(""),
+                n = a.length;
+
+            for (var i = n - 1; i > 0; i--) {
+                var j = Math.floor(Math.random() * (i + 1));
+                var tmp = a[i];
+                a[i] = a[j];
+                a[j] = tmp;
+            }
+            return a.join("");
+        }
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

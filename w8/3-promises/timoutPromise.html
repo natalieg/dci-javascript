@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Promise TimeOut</title>
+</head>
+
+<body>
+    <script>
+
+        var max = 3000;
+        var delay = getRandomInt(max);
+        console.log(delay);
+
+        var seconds = Math.floor(delay / 1000)
+
+        // Promise
+        var loginSuccess = new Promise(
+            function (resolve, reject) {
+                if (delay < 1000) {
+                    var login = "Login was succesfull after " + delay + " Milliseconds";
+                    resolve(login);
+                } else {
+                    setTimeout(function () {
+                        var reason = new Error(`Login not succesfull, Server Timeout. Waited for ${seconds} Seconds`);
+                        reject(reason);
+                    }, delay)
+
+                }
+
+            })
+
+
+        var checkDelay = function () {
+            loginSuccess
+                .then(function (fulfilled) {
+                    console.log("Success " + fulfilled);
+                })
+                .catch(function (error) {
+                    console.log(error.message);
+                })
+        }
+
+        function getRandomInt(max) {
+            return Math.floor(Math.random() * Math.floor(max));
+        }
+
+
+        checkDelay();
+
+
+    </script>
+</body>
+
+</html>

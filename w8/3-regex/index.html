@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var patt = /dci/;
+        var str = "I like dci dci very much";
+        var arr = str.match(patt);
+        console.log(arr);
+
+        //global
+        str = "I like dci very much, dci DCI dci..."
+        patt = /dci/g;
+        arr = str.match(patt);
+        console.log(arr);
+
+        // g = global,i = case insensitive
+        str = "I like dciiii DDdci, Dci, Dci, dcI , dCi, dci";
+        patt = /dci/gi;
+        arr = str.match(patt);
+        console.log(arr);
+
+        //brackets, searching for a, b, c and not m
+        str = "test_a test_b test_c test_m";
+        patt = /test_[a-c]/g;
+        arr = str.match(patt);
+        console.log(arr);
+
+        //brackets, excluding a,b,c 
+        str = "test_a test_b test_c test_m";
+        patt = /test_[^a-c]/g;
+        arr = str.match(patt);
+        console.log(arr);
+
+        //brackets, showing 0,1,3 
+        str = "test_0 test_1 test_2 test_3";
+        patt = /test_[^2]/g;
+        arr = str.match(patt);
+        console.log(arr);
+
+        // (x|y) find this or this 
+        str = "test_x test_b test_y test_m";
+        patt = /test_[x|y]/g;
+        arr = str.match(patt);
+        console.log(arr);
+
+        // (x|y) find this or this 
+        str = "colour color colour colrore";
+        patt = /col(o|ou)r/g;
+        arr = str.match(patt);
+        console.log(arr);
+
+        //Metacharacters
+        // . - dot, finds any character
+        // string + 1 character per dot  
+        str = "car car?? cars car2 car car###";
+        patt = /car./g;
+        arr = str.match(patt);
+        console.log(arr);
+
+        //\Find a word character
+        // w+ gives whole word 
+        str = "Google.com facebook.com romal.com romal.it 123213.com";
+        patt = /\w+\.com/g;
+        console.log(str.match(patt));
+
+        // W+ special chars
+        str = "Google.com %&*.com romal.com romal.it ###.com";
+        patt = /\W+\.com/g;
+        console.log(str.match(patt));
+
+        // Quantifiers
+        // n+ Matches any string that contains at least one n
+        str = "n nnn la alalala ululu lll nnnnnnnnnnn nnnnnatalie mannnnna manamana x l lala"
+        patt = /n+/g
+        console.log(str.match(patt));
+
+        //n? matches any string that contains zero or one occurrences of n
+        str = "3 July, 3rd July"
+        patt = /3(rd)?/g
+        console.log(str.match(patt)); 
+
+        // matches any string that contains a sequences of 2 to 3 n 
+        str = "n nnn la alalala ululu lll nnnnnnnnnnn nnnnnatalie mannnnna manamana x l lala"
+        patt = /n{2}/g
+        console.log(str.match(patt));
+
+        //matches any string with n at the beginning 
+        str = "google.it google.com google.de";
+        patt = /^google\.\w+/g;
+        console.log(str.match(patt));
+
+        patt = /google\.\w+$/g;
+        console.log(str.match(patt));
+
+    </script>
+</body>
+
+</html>

@@ -13,7 +13,7 @@ pwInput.onkeyup= function(){
     // checking for all requirements 
     (pwInput.value.length > 7) ? changeValid(reqCharInfo, true) : changeValid(reqCharInfo, false);
     pwInput.value.match(/^(?=.*[a-z]).+$/) ? changeValid(reqLowerInfo, true) : changeValid(reqLowerInfo, false);
-    pwInput.value.match((/^?=.*[A-Z]).+$/) ? changeValid(reqUpperInfo, true) : changeValid(reqUpperInfo, false);
+    pwInput.value.match(/^?=.*[A-Z]).+$/) ? changeValid(reqUpperInfo, true) : changeValid(reqUpperInfo, false);
     pwInput.value.match(/^(?=.*[0-9_\W]).+$/) ? changeValid(reqNumInfo, true) : changeValid(reqNumInfo, false);
     // if all requirements are met color border green
     (reqCharInfo.classList.contains('valid') && 
