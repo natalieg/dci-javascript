@@ -12,7 +12,9 @@ function drop(ev) {
     var data = ev.dataTransfer.getData("text");
     if(data != ev.target.id){
         ev.target.appendChild(document.getElementById(data));
-    } 
+    } else {
+        console.log('this is the same div');
+    }
 }
 
 document.addEventListener("dragenter", function(event){
@@ -51,6 +53,7 @@ for (let index = 0; index < createDivNumber; index++) {
     setAttributes(nDiv, { "draggable": "true", "id": newId, "ondragstart": "drag(event)" });
     stapel.appendChild(nDiv);
     nDiv.classList.add("box");
+ 
     if (inCount < colors) {
         inCount++;
     } else {
