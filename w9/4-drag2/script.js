@@ -1,3 +1,5 @@
+let dropColor = "beige";
+
 function over(ev) {
     ev.preventDefault();
 }
@@ -7,10 +9,33 @@ function drag(ev) {
 }
 
 function drop(ev) {
-    ev.preventDefault();
     var data = ev.dataTransfer.getData("text");
-    ev.target.appendChild(document.getElementById(data));
+    if(data != ev.target.id){
+        ev.target.appendChild(document.getElementById(data));
+    } 
 }
+
+document.addEventListener("dragenter", function(event){
+    if((event.target.className == "content") || (event.target.classList.contains("box"))){
+        event.target.style.backgroundColor = dropColor;
+        event.target.style.border = "2px dashed blue";
+    }    
+})
+
+document.addEventListener("dragleave", function(event){
+    if((event.target.className == "content") || (event.target.classList.contains("box"))){
+        event.target.style.backgroundColor = "";
+        event.target.style.border = "";
+    }    
+})
+
+document.addEventListener("drop", function(event){
+    if((event.target.className == "content") || (event.target.classList.contains("box"))){
+        event.target.style.backgroundColor = "";
+        event.target.style.border = "";
+    }    
+})
+
 
 // ------------------
 // Create more Divs
@@ -25,7 +50,7 @@ for (let index = 0; index < createDivNumber; index++) {
     let newId = "new" + index;
     setAttributes(nDiv, { "draggable": "true", "id": newId, "ondragstart": "drag(event)" });
     stapel.appendChild(nDiv);
-    console.log(inCount);
+    nDiv.classList.add("box");
     if (inCount < colors) {
         inCount++;
     } else {

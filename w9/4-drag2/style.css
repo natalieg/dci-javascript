@@ -9,6 +9,7 @@
     overflow: hidden;
     opacity: 1;
     float: left;
+    transition: background-color .5s;
 }
 
 .stapel {
@@ -25,13 +26,17 @@
     margin: 5px;
 }
 
+.content div{
+    margin-bottom: 60px;
+}
+
 div {
     border: 1px solid rgb(218, 200, 40);
     height: 50px;
     width: 95%;
     background-color: yellow;
-    margin: 14px auto;
-    opacity: .97;
+    margin: 10px auto;
+    opacity: .92;
     text-align: center;
     color: rgba(0, 0, 0, 0.719);
 }
