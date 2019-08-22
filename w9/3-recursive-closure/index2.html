@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Closure</title>
+</head>
+
+<body>
+    <script>
+        /// Nested Function
+        // Value will increase with every call
+        function makeCounter() {
+            var currentValue = 1;
+            return function () {
+                return currentValue++; //++ at the beginning will increase the value at the first run
+            }
+        }
+
+        var res = makeCounter();
+        console.log("Increase with Counter 1");
+        console.log(res());
+        console.log(res());
+
+        console.log("Counter 2")
+        var res2 = makeCounter();
+        console.log(res2());
+        console.log(res2());
+
+        //--------------------------------------
+
+        function makeCounter2() {
+            function incr() {
+                return incr.currentValue++;
+            }
+            incr.currentValue = 1;
+            return incr;
+        }
+
+        console.log("Counter 3, Starting with defined value")
+        var res3 = makeCounter2();
+        res3.currentValue = 5; // Start with 5
+        console.log(res3());
+        console.log(res3());
+
+        console.log("Start with new Number Counter IV");
+        var count4 = makeCounter2();
+        count4.currentValue = 100;
+        console.log(count4());
+        console.log(count4());
+
+        // --------------------------------------------------------------
+        // Multiply with every call
+        function mutliply() {
+            function mul(){
+                return mul.current *= 2;
+            }
+            mul.current = 5;
+            return mul;
+        }
+        console.log("multiply with defined starting value");
+        var mult1 = mutliply();
+        mult1.current = 3;
+        console.log(mult1());
+        console.log(mult1());
+        console.log(mult1());
+
+    </script>
+</body>
+
+</html>

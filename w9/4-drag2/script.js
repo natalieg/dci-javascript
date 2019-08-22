@@ -1,0 +1,62 @@
+function over(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var data = ev.dataTransfer.getData("text");
+    ev.target.appendChild(document.getElementById(data));
+}
+
+// ------------------
+// Create more Divs
+
+var stapel = document.getElementById("stapel");
+var createDivNumber = 40;
+var colors = 6;
+
+let inCount = 0;
+for (let index = 0; index < createDivNumber; index++) {
+    let nDiv = document.createElement("div");
+    let newId = "new" + index;
+    setAttributes(nDiv, { "draggable": "true", "id": newId, "ondragstart": "drag(event)" });
+    stapel.appendChild(nDiv);
+    console.log(inCount);
+    if (inCount < colors) {
+        inCount++;
+    } else {
+        inCount = 1;
+    }
+    switch (inCount) {
+        case 1:
+            nDiv.classList.add("yellow");
+            break;
+        case 2:
+            nDiv.classList.add("green");
+            break;
+        case 3:
+            nDiv.classList.add("pink");
+            break;
+        case 4:
+            nDiv.classList.add("blue");
+            break;
+        case 5:
+            nDiv.classList.add("red");
+            break;
+        case 6:
+            nDiv.classList.add("darkblue");
+            break;
+        default:
+        // code block
+    }
+}
+
+function setAttributes(el, attrs) {
+    for (var key in attrs) {
+        el.setAttribute(key, attrs[key]);
+    }
+}

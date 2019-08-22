@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function makeCounter(n) {
+            function incr(m) {
+                return n += m;
+            }
+            return incr;
+        }
+
+        var res = makeCounter(5)(3);
+        console.log(res);
+        
+        /// Nested Function
+        // Value will increase with every call
+        function makeCounter2() {
+            var currentValue = 0;
+            return function(){
+                return currentValue ++;
+            }
+        }
+
+        var res2 = makeCounter2();
+        console.log("Increase");
+        console.log(res2()); //0
+        console.log(res2()); //1
+
+        // ----------------------------------------------
+
+        // Multiply with every call
+        function mutliply(){
+            var val = 1;
+            return function(){
+                return val *= 2;
+            }
+        }
+        var prod = mutliply();
+        console.log("Multiply");
+        console.log(prod()); //2
+        console.log(prod()); //4
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Loop
+        function sumToLoop(n){
+            let sum = 0;
+            while(n > 0){
+                sum += n;
+                n --;
+            }
+            return sum;
+        }
+        console.log("Loop " + sumToLoop(10));
+
+        // Recursive
+        let sum = 0;
+        function sumToRec(m){
+            if(m > 0 ){
+                sum += m;
+                return sumToRec(m-1); 
+            } 
+            return sum;
+        }
+        console.log("Recursive " + sumToRec(10));
+
+    </script>
+</body>
+</html>
