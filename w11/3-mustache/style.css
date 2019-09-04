@@ -12,6 +12,7 @@ body {
   margin: 0 10%;
   padding: 10px 20px;
   border: none;
+  max-width: 900px;
 }
 
 .entry h1 {
@@ -45,6 +46,15 @@ body {
   width: 100%;
 }
 
+.entry #posts .image {
+  width: 100px;
+  height: 120px;
+  margin-top: -10px;
+  margin-left: 10px;
+  background-size: cover;
+  float: right;
+}
+
 .entry #posts .blog-date {
   font-weight: bold;
 }
@@ -68,7 +78,7 @@ body {
   margin: 0;
   color: black;
   margin: 10px 0;
-  background: rgba(255, 255, 255, 0.548);
+  background: rgba(255, 255, 255, 0.747);
 }
 
 ul {

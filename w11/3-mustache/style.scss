@@ -12,6 +12,7 @@ body {
     margin: 0 10%;
     padding: 10px 20px;
     border: none;
+    max-width: 900px;
     h1 {
         background-color: rgba(255, 255, 255, 0.514);
         margin: 0;
@@ -38,6 +39,14 @@ body {
         margin: 0;
         padding: 0;
         width: 100%;
+        .image {
+            width: 100px;
+            height: 120px;
+            margin-top: -10px;
+            margin-left: 10px;
+            background-size: cover;
+            float: right;
+        }
         .blog-date {
             font-weight: bold;
         }
@@ -57,7 +66,7 @@ body {
             margin: 0;
             color: black;
             margin: 10px 0;
-            background: rgba(255, 255, 255, 0.548);
+            background: rgba(255, 255, 255, 0.747);
         }
     }
 }
@@ -90,11 +99,11 @@ ul {
         box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 8px 0 rgba(0,0,0,0.12);
         margin: 7px 8px;
     }
-    li:hover {
-        // margin: 16px 8px;
-        // transform: scale(1.2);
-        // transition: .5s;
-    }
+    // li:hover {
+    //     // margin: 16px 8px;
+    //     // transform: scale(1.2);
+    //     // transition: .5s;
+    // }
     li:nth-child( odd ) {
         color: white;
         background: rgb(19, 90, 95);

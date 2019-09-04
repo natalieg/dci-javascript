@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.2.0/handlebars.min.js"
+        integrity="sha256-fIuSfP8oRbwWG9pRr+FaGfBU62kYY+7YqUsXSCgnYqM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Character Cards</title>
+</head>
+
+<body>
+    <script id="hb-chars" type="text/x-handlebars-template">
+        <h1>Characters from {{name}} </h1>
+        <div class="entry">
+            
+            {{#each character}}
+            <div class="card">
+                <h3> {{this.name}} </h3>
+                <h4> {{this.actor}} </h4>
+                <div class="img" style="background-image: url(img/{{this.img}}) " ></div>
+                <p class="info-bender"> {{this.bender}} </p>
+                <p class="info-text"> {{this.text}}... </p>
+            </div>
+            {{/each}}
+            
+        </div>
+        
+          </script>
+
+    <script>
+        // Retrieve the template Data from HTML
+        var template = $('#hb-chars').html();
+        // Complie the template
+        var templateScript = Handlebars.compile(template);
+        // Define your Name and occupation
+        var context = {
+            "name": "Legend of Korra",
+            "character": [
+                { "name": "Korra", "actor": "Janet Varney", "img": "Korra.png", "bender": "Avatar", "text": "Korra is the current incarnation of the Avatar and immediate successor of Avatar Aang. Born and raised in the Southern Water Tribe, where she mastered waterbending, earthbending, and firebending,[7] she later relocated to Republic City to attain a similar proficiency with airbending under the" },
+                { "name": "Asami Sato", "actor": "Seychelle Gabriel", "img": "Asami_Sato.png", "bender": "No Bender", "text": "Asami Sato is the only child of the former wealthy industrialist, Hiroshi Sato[6] and his wife, Yasuko.[1][7] Although a nonbender, when she discovered that her father was working with the Equalists, she rejected his hatred of benders[1] and actively fought against the Equalists as a member of Team Avatar.[8]" },
+                { "name": "Mako", "actor": "David Faustino", "img": "Mako.png", "bender": "Fire", "text": "Mako is a firebender from a multicultural family who grew up on the streets of Republic City as an orphan with his younger brother, Bolin. Mako always wore his signature red scarf that was once his father's, who was murdered along with his mother when he was a boy.[1]" },
+                { "name": "Bolin", "actor": "P. J. Byrne", "img": "Bolin.png", "bender": "Earth", "text": "Bolin is an earthbender from a multicultural family. He grew up on the streets of Republic City under the protection of his older brother, Mako, after their parents were killed by a firebender." },
+                { "name": "Jinora", "actor": "Kiernan Shipka", "img": "Jinora.png", "bender": "Air", "text": "Jinora is the first child and elder daughter of Tenzin and Pema and granddaughter of Katara and the late Avatar Aang. She lives on Air Temple Island with her parents and three younger siblings: Ikki, Meelo, and Rohan. " },
+                { "name": "Tenzin", "actor": "J. K. Simmons", "img": "Tenzin.png", "bender": "Air", "text": "Tenzin is the youngest child of Avatar Aang and Katara and the oldest living airbending master. He lives on Air Temple Island with the Air Acolytes, his wife Pema, and their four children: Jinora, Ikki, Meelo, and Rohan." },
+                { "name": "Varrick", "actor": "John M. Higgins", "img": "Varrick.png", "bender": "Non Bender", "text": "Iknik Blackstone Varrick, more commonly known by his last name, is an eccentric and charismatic nonbending billionaire businessman known for his ambitious nature and flamboyance.[5] Born in the Southern Water Tribe, he is a nobleman[6] who enjoys gallivanting across the globe on his yacht and flaunting his extravagant lifestyle, often at the expense of his then-assistant and later wife, Zhu Li.[7]" },
+            ]
+        };
+        var html = templateScript(context);
+        // Insert the HTML code into the page
+        $(document.body).append(html);
+    </script>
+
+</body>
+
+</html>
