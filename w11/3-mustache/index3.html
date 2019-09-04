@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.2.0/handlebars.min.js"
+        integrity="sha256-fIuSfP8oRbwWG9pRr+FaGfBU62kYY+7YqUsXSCgnYqM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>HB Each Loop</title>
+</head>
+
+<body>
+    <script id="hb-object" type="text/x-handlebars-template">
+  <div class="entry">
+      <h1> {{title}} </h1>
+      <h2> by {{author.name}} </h2>
+      <p class="author-info">{{author.name}} is {{author.age}} and lives in {{author.city}} </p>
+      <div class="body">
+          <ul id="posts">
+            {{#each posts}}
+            <li class="post"> <p><span class="blog-date"> {{this.date}} </span> <span class="blog-title"> {{this.title}}</span> </p> {{this.text}}... <br><br><span class="more">read more</span> </li>
+            {{/each}}
+        </ul>
+      </div>
+  </div>
+  
+    </script>
+
+    <script>
+        // Retrieve the template Data from HTML
+        var template = $('#hb-object').html();
+        // Complie the template
+        var templateScript = Handlebars.compile(template);
+        // Define your Name and occupation
+        var context = {
+            "title": "stories of my life",
+            "author": { "name": "Tobias", "age": "25", "city": "New York" },
+            "posts": [
+            {"date":"20.06.2019", "title": "A new Entry!!" ,"text": "And then I see him again otam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed qu"},
+            {"date":"12.05.2019", "title": "Last Convention" ,"text": "ptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed qu"},
+            {"date":"10.02.2019", "title": "I've been in Germany" ,"text": "the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasio"},
+            {"date":"18.01.2019", "title": "First Entry!" ,"text": "So this is actually the first time I'm writing in my new blog the actual teachings of the great explorer of the truth, the master-builder of human happiness. No one rejects, dislikes, or avoids pleasure itself, because it is pleasure, but because those who do not know how to pursue pleasure rationally encounter consequences that are extremely painful. Nor again is there anyone who loves or pursues or desires to obtain pain of itself, because it is pain, but because occasio"},
+            ],
+        };
+        var html = templateScript(context);
+        // Insert the HTML code into the page
+        $(document.body).append(html);
+    </script>
+</body>
+
+</html>

@@ -34,7 +34,8 @@ var myVar = null;
 autoBtn.onclick = function(){
     autoBtn.classList.toggle("btnActive");
     if(!active){
-        myVar = setInterval(autoSlide, 2000);        active = true;
+        myVar = setInterval(autoSlide, 2000);        
+        active = true;
     } else {
         clearInterval(myVar);
         active = false;

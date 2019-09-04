@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.2.0/handlebars.min.js" integrity="sha256-fIuSfP8oRbwWG9pRr+FaGfBU62kYY+7YqUsXSCgnYqM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>HB Each Loop</title>
+</head>
+<body>
+    <script id="hb-intro" type="text/x-handlebars-template">
+        <div>
+            My name is {{name}}. I am a {{occupation}}. I am {{years}} years old.
+        </div>
+    </script>    
+
+    <script>
+        // Retrieve the template Data from HTML
+        var template = $('#hb-intro').html();
+        // Complie the template
+        var templateScript = Handlebars.compile(template);
+        // Define your Name and occupation
+        var context = {"name": "Tobias", "occupation": "Dancer", "years": "25"};
+        var html = templateScript(context);
+        // Insert the HTML code into the page
+        $(document.body).append(html);
+    </script>
+</body>
+</html>

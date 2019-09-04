@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Change Event in javascript</title>
+</head>
+
+<body>
+
+    <style>
+        p {
+            background-color: rgb(245, 182, 9);
+            padding: 15px;
+            display: none;
+        }
+    </style>
+
+    <h2>Javascript</h2>
+    <form action="">
+        <label for="">City</label>
+        <select name="" id="selection">
+            <option value="Hamburg">Hamburg</option>
+            <option value="Berlin">Berlin</option>
+            <option value="Duesseldorf">Duesseldorf</option>
+        </select>
+    </form>
+    <p id="para"></p>
+
+    <script>
+        let select = document.getElementById('selection');
+        let p = document.getElementById("para");
+
+        select.addEventListener("change", function(){
+            p.style.display = "block";
+            p.innerHTML = select.value;
+        });
+    </script>
+
+</body>
+
+</html>

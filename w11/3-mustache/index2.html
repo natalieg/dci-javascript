@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.2.0/handlebars.min.js" integrity="sha256-fIuSfP8oRbwWG9pRr+FaGfBU62kYY+7YqUsXSCgnYqM=" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>HB Each Loop</title>
+</head>
+<body>
+    <script id="hb-each" type="text/x-handlebars-template">
+      <ul>
+          <h4> {{name}} </h4>
+          {{#each myList}}
+          <li class="char"> {{this}} </li>
+          {{/each}}
+          <h4> {{name2}} </h4>
+          {{#each myAu}}
+          <li class="au"> {{this}} </li>
+          {{/each}}
+      </ul>
+    </script>    
+
+    <script>
+        // Retrieve the template Data from HTML
+        var template = $('#hb-each').html();
+        // Complie the template
+        var templateScript = Handlebars.compile(template);
+        // Define your Name and occupation
+        var context = {"name": "Characters", 
+        "myList":["Tobias", "Daven", "Garu", "Mia", "Ramona", "Miranda"],
+        "name2":"Universe",
+        "myAu":["RL1", "Ragnarok", "Dream"]
+        };
+        var html = templateScript(context);
+        // Insert the HTML code into the page
+        $(document.body).append(html);
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>On Event</title>
+</head>
+<body>
+    <style>
+        p {
+            padding: 10px;
+        }
+        .light {
+            font-weight: 100;
+            color: lightcoral;
+            background: powderblue;
+        }
+    </style>
+
+    <p>Here is some text</p>
+
+    <script>
+    $("p").on("mouseover mouseout", function(){
+        $(this).toggleClass("light");
+    })
+    </script>
+</body>
+</html>

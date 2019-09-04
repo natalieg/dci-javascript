@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>Closure</title>
 </head>
 
 <body>
@@ -22,14 +22,14 @@
         
         /// Nested Function
         // Value will increase with every call
-        function makeCounter2() {
-            var currentValue = 0;
+        function makeCounter2(n) {
+            var currentValue = n;
             return function(){
                 return currentValue ++;
             }
         }
 
-        var res2 = makeCounter2();
+        var res2 = makeCounter2(2);
         console.log("Increase");
         console.log(res2()); //0
         console.log(res2()); //1
