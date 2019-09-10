@@ -1,0 +1,71 @@
+.hide {
+    display: none;
+}
+
+.right {
+    float: right;
+}
+
+.next {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+}
+
+.prev {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+
+.form {
+    width: 600px;
+    height: 300px;
+    position: relative;
+}
+
+.form input {
+    width: 100%;
+    margin-bottom: 10px; 
+}
+
+#infoMsg {
+    color: red;
+    font-size: 20px;
+}
+
+.progress {
+    width: 195px;
+    height: 5px;
+    background-color: orangered;
+    margin: 2px;
+    display: inline-block;
+}
+
+h2 {
+    margin-bottom: 5px;
+}
+
+#result {
+    width: 600px;
+    height: 300px;
+    margin-top: 20px;
+    padding: 10px;
+    position: relative;
+}
+
+#result-inner {
+    position: relative;
+}
+
+.avatar{
+    height: 100px;
+    width: 100px;
+    padding: 20px;
+    background-size: cover;
+    background-position: middle middle;
+    border: 1px solid black;
+    position: absolute;
+    top: -10px;
+    right: 5px;
+}

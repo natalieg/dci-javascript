@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Form 3 Step</title>
+</head>
+
+<body>
+    <h1>JS Registration</h1>
+    <hr>
+    <h2>Personal Info</h2>
+    <div id="p1" class="progress"></div>
+    <div id="p2" class="progress"></div>
+    <div id="p3" class="progress"></div>
+    <div id="infoMsg"></div>
+  
+    <div id="result" class="hide">
+        <div id="result-inner">
+            <p><span>Name: </span><span id="resName"></span></p>
+            <p><span>Birth Date: </span><span id="resDate"></span></p>
+            <p><span>Nationality: </span><span id="resNat"></span></p>
+            <p><span>Adress: </span><span id="resAddress"></span></p>
+            <p><span>City: </span><span id="resCity"></span></p>
+            <p><span>Country: </span><span id="resCountry"></span></p>
+            <p><span>Username: </span><span id="resUsername"></span></p>
+            <p><span></span><span id="resPicture"></span></p>
+        </div>
+        <button id="prev4" class="prev">Previous</button>
+    </div>
+  
+    <div id="form1" class="form">
+        <form>
+            <h4>Step 1</h4>
+            <label for="">
+                First Name
+                <input type="text" id="firstName" value="Natalie">
+            </label><br>
+            <label for="">
+                Last Name
+                <input type="text" id="lastName" value="Gornicki">
+            </label><br>
+            <label for="">
+                Birth Date
+                <input type="date" id="birthDate" value="1986-01-03">
+            </label><br>
+            <label for="">
+                Nationality
+                <input type="text" id="nationality" value="german">
+            </label><br>
+            <button id="next1" class="next">Next</button>
+        </form>
+    </div>
+    <div id="form2" class="hide form">
+        <form action="">
+            <h4>Step 2</h4>
+            <label for="">
+                Address
+                <input type="text" id="address" value="123 Street">
+            </label>
+            <label for="">
+                City
+                <input type="text" id="city" value="Hamburg">
+            </label>
+            <label for="">
+                Country
+                <input type="text" id="country" value="Germany">
+            </label>
+            <button id="prev2" class="prev">Previous</button>
+            <button id="next2" class="next">Next</button>
+        </form>
+    </div>
+    <div id="form3" class="hide form">
+        <h4>Step 3</h4>
+        <form action="">
+            <label for="">
+                Username
+                <input type="text" id="username">
+            </label>
+            <label for="">
+                Password
+                <input type="password" id="password">
+            </label>
+            <label for="">
+                Repeat Password
+                <input type="password" id="repassword">
+            </label>
+            <label for="">
+                Profile Picture
+                <input type="text" id="picture" value="https://images.pexels.com/photos/2662434/pexels-photo-2662434.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500">
+                <div id="avatar"></div>
+            </label>
+            <button id="prev3" class="prev">Previous</button>
+            <button id="submit" class="next">Finish</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
