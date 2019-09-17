@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <title>Passwort Thing with JQuery</title>
+</head>
+
+<body>
+    <style>
+        .hide {
+            display: none;
+        }
+    </style>
+
+    <div>
+        <form action="">
+            <h3>Password (6 characters minimum)</h3>
+            <p>Password</p>
+            <input type="password" id="password"><br>
+            <input type="checkbox" name="" id="check">
+            <label for="" id="show">Show Password</label>
+            <label for="" id="hide" class="hide">Hide Password</label>
+        </form>
+    </div>
+
+    <script>
+        let check = $("#check");
+
+         $("#check").change(function(){
+            if(this.checked){
+                let show = $("#show");
+            let hide = $("#hide");
+            let pass = $("#password");
+
+            pass.type = "text";
+            show.addClass("hide");
+            hide.removeClass("hide");
+            console.log(pass, pass.type);
+            }
+        })
+
+    </script>
+
+</body>
+
+</html>
