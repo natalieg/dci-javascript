@@ -1,0 +1,103 @@
+
+:root {
+  --headerColor: #282c34;
+  --lightColor: rgb(208, 225, 238);
+}
+
+.header {
+  background-color: var(--headerColor);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: var(--lightColor);
+  background-image: url(img/succulent.jpeg);
+  background-size: cover;
+  background-position: top center;
+  
+}
+
+.headerContent {
+  background-color: #111e3888;
+  padding: 15px; 
+  width: 60%;
+  outline: 1px solid var(--lightColor);
+  outline-offset: -6px;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+.naviBar {
+  background-color: rgb(166, 198, 226);
+  list-style-type: none;
+  margin-top: 0;
+  display: flex;
+  justify-content: center;
+    padding: 10px 5px;
+}
+
+.naviBar a {
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+  padding: 10px 15px;
+}
+
+.naviBar a:hover {
+  background-color: var(--headerColor);
+  color: var(--lightColor);
+}
+
+.section {
+  background-color: var(--lightColor);
+  padding: 5px 20px;
+  margin: 0 auto 20px;
+  max-width: 800px;
+  outline: 1px solid var(--headerColor);
+  outline-offset: -4px;
+  
+}
+
+.contentImage {
+  height: 50px;
+}
+
+.section h3 {
+  margin-bottom: 0;
+}
+
+.subtitle {
+  margin-top: 0;
+  font-size: 80%;
+}
+
+.content {
+  text-align: justify;
+}
+
+/* //////////////////////////// */
+
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}

@@ -1,0 +1,57 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
+}
+
+.person {
+  padding: 0px;
+  background-color: rgb(149, 149, 228);
+  background-image: url(img/sky.jpeg);
+  background-size: cover;
+  background-position: bottom -5px center;
+  margin: 5px;
+  width: 30%;
+  display: inline-block;
+  outline: 1px solid white;
+  outline-offset: -4px;
+}
+
+.person:nth-child(odd){
+  background-color: #79678d; 
+  background-image: url(img/sky.jpeg);
+  background-position: top center;
+  background-blend-mode: overlay;
+  color: white;
+}
+
+.action {
+  margin: 10px;
+  padding: 5px;
+}
+
+.person h3 {
+  padding: 4px;
+}
+
+.vip {
+  text-decoration: underline;
+  background-color: rgba(255, 255, 255, 0.377);
+}
