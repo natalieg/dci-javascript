@@ -7,7 +7,7 @@ import Content from './Components/Content';
 function App() {
   return (
     <div className="App">
-      <Header name="hi Mansour" desc="This is a React Webpage"
+      <Header name="Page Title" desc="This is a React Webpage"
         height="150" />
 
       <ul className="naviBar">

@@ -3,9 +3,9 @@ table {
   margin: 20px auto;
 }
 
-table, thead, tr, th, td {
-  /* border: 1px solid black; */
-}
+/* table, thead, tr, th, td {
+  border: 1px solid black; 
+} */
 
 thead tr {
   background-color: #ffd000 !important;

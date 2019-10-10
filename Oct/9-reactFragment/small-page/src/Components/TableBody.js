@@ -1,9 +1,9 @@
 import React from 'react';
 
 const TableBody = (props) => {
-const body = props.list.map((item) => {
+    const body = props.list.map((item) => {
         return (
-            <tr>
+            <tr key={item.id}>
                 <td>{item.id}</td>
                 <td>{item.name}</td>
                 <td>{item.age}</td>

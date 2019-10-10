@@ -18,6 +18,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="App">
+        <h1>react table fragments</h1>
         <table>
           <thead>
             <tr>
