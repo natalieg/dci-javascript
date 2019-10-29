@@ -8,7 +8,7 @@ var getText = () => {
     fetch("test.txt")
     .then(res => {
         return res.text();
-    })
+    }) 
     .then( data => {
         console.log(data);
         outDiv.innerHTML = data;
