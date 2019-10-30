@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "/dci-javascript/Oct/react-me/aboutme-app/static/css/main.dd9dcbc7.chunk.css",
-    "main.js": "/dci-javascript/Oct/react-me/aboutme-app/static/js/main.261718e1.chunk.js",
-    "main.js.map": "/dci-javascript/Oct/react-me/aboutme-app/static/js/main.261718e1.chunk.js.map",
-    "runtime-main.js": "/dci-javascript/Oct/react-me/aboutme-app/static/js/runtime-main.9e8f2872.js",
-    "runtime-main.js.map": "/dci-javascript/Oct/react-me/aboutme-app/static/js/runtime-main.9e8f2872.js.map",
-    "static/js/2.bdc25be8.chunk.js": "/dci-javascript/Oct/react-me/aboutme-app/static/js/2.bdc25be8.chunk.js",
-    "static/js/2.bdc25be8.chunk.js.map": "/dci-javascript/Oct/react-me/aboutme-app/static/js/2.bdc25be8.chunk.js.map",
-    "index.html": "/dci-javascript/Oct/react-me/aboutme-app/index.html",
-    "precache-manifest.9c6daff0f2f5942fd4fd1c16102cb645.js": "/dci-javascript/Oct/react-me/aboutme-app/precache-manifest.9c6daff0f2f5942fd4fd1c16102cb645.js",
-    "service-worker.js": "/dci-javascript/Oct/react-me/aboutme-app/service-worker.js",
-    "static/css/main.dd9dcbc7.chunk.css.map": "/dci-javascript/Oct/react-me/aboutme-app/static/css/main.dd9dcbc7.chunk.css.map",
-    "static/media/draw1.png": "/dci-javascript/Oct/react-me/aboutme-app/static/media/draw1.f57d09b3.png",
-    "static/media/draw2.png": "/dci-javascript/Oct/react-me/aboutme-app/static/media/draw2.bfc9666f.png",
-    "static/media/draw3.png": "/dci-javascript/Oct/react-me/aboutme-app/static/media/draw3.c1713cb4.png",
-    "static/media/draw4.png": "/dci-javascript/Oct/react-me/aboutme-app/static/media/draw4.d643f7db.png",
-    "static/media/game1.png": "/dci-javascript/Oct/react-me/aboutme-app/static/media/game1.7e105543.png",
-    "static/media/game2.png": "/dci-javascript/Oct/react-me/aboutme-app/static/media/game2.a5089bc2.png",
-    "static/media/App.css": "/dci-javascript/Oct/react-me/aboutme-app/static/media/leafs.4ca5132b.jpeg",
-    "static/media/me.jpg": "/dci-javascript/Oct/react-me/aboutme-app/static/media/me.c51f8fc8.jpg"
+    "main.css": "/dci-javascript/static/css/main.82e5c51d.chunk.css",
+    "main.js": "/dci-javascript/static/js/main.187d195e.chunk.js",
+    "main.js.map": "/dci-javascript/static/js/main.187d195e.chunk.js.map",
+    "runtime-main.js": "/dci-javascript/static/js/runtime-main.b062dd9c.js",
+    "runtime-main.js.map": "/dci-javascript/static/js/runtime-main.b062dd9c.js.map",
+    "static/js/2.bdc25be8.chunk.js": "/dci-javascript/static/js/2.bdc25be8.chunk.js",
+    "static/js/2.bdc25be8.chunk.js.map": "/dci-javascript/static/js/2.bdc25be8.chunk.js.map",
+    "index.html": "/dci-javascript/index.html",
+    "precache-manifest.4e8889e1157b9b4ceb531d32644c3098.js": "/dci-javascript/precache-manifest.4e8889e1157b9b4ceb531d32644c3098.js",
+    "service-worker.js": "/dci-javascript/service-worker.js",
+    "static/css/main.82e5c51d.chunk.css.map": "/dci-javascript/static/css/main.82e5c51d.chunk.css.map",
+    "static/media/draw1.png": "/dci-javascript/static/media/draw1.f57d09b3.png",
+    "static/media/draw2.png": "/dci-javascript/static/media/draw2.bfc9666f.png",
+    "static/media/draw3.png": "/dci-javascript/static/media/draw3.c1713cb4.png",
+    "static/media/draw4.png": "/dci-javascript/static/media/draw4.d643f7db.png",
+    "static/media/game1.png": "/dci-javascript/static/media/game1.7e105543.png",
+    "static/media/game2.png": "/dci-javascript/static/media/game2.a5089bc2.png",
+    "static/media/App.css": "/dci-javascript/static/media/leafs.4ca5132b.jpeg",
+    "static/media/me.jpg": "/dci-javascript/static/media/me.c51f8fc8.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.9e8f2872.js",
+    "static/js/runtime-main.b062dd9c.js",
     "static/js/2.bdc25be8.chunk.js",
-    "static/css/main.dd9dcbc7.chunk.css",
-    "static/js/main.261718e1.chunk.js"
+    "static/css/main.82e5c51d.chunk.css",
+    "static/js/main.187d195e.chunk.js"
   ]
 }
